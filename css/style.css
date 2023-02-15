@@ -1,0 +1,634 @@
+/**************** Variables *****************/
+:root {
+  --lime-color: #75D007;
+  --red-color: red;
+  --whiten-color: #fff;
+  --paragraph-color: #919191;
+}
+/************** Global Styles ***************/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  display: inline-block;
+}
+.container {
+  margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+@media (max-width: 1199px) {
+  .container {
+    max-width: 80%;
+  }
+}
+@media (max-width: 960px) {
+  .container {
+    max-width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    max-width: 95%;
+  }
+}
+.headtitle {
+  text-align: center;
+  padding: 50px 0px 35px;
+}
+.headtitle h2 {
+  color: var(--red-color);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: -0.1rem;
+}
+.headtitle p {
+  color: var(--paragraph-color);
+  margin-top: 15px;
+}
+.commonbtn {
+  color: var(--whiten-color);
+  padding: 15px 30px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: bold;
+}
+.commonbtn:hover {
+  background-color: transparent;
+}
+/*********************************************/
+/************ Section one (Header) ***********/
+header {
+  height: 100vh;
+  background-image: url("https://fast-food.bold-themes.com/main-demo/wp-content/uploads/sites/2/2017/06/background-pizza-home-top.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+header nav {
+  display: flex;
+  height: 100px;
+}
+header .mobileNavbar {
+  display: none;
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav ul li {
+  font-weight: bold;
+  color: var(--whiten-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-transform: uppercase;
+  letter-spacing: -0.05rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+header nav ul li:first-child {
+  border-bottom: 3px solid var(--red-color);
+}
+header nav .social-media {
+  color: var(--whiten-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+header nav .social-media span {
+  padding: 10px;
+  cursor: pointer;
+}
+header nav .social-media span i {
+  transition: 0.3s;
+}
+header nav .social-media span i:hover {
+  color: var(--red-color);
+}
+@media(max-width: 960px) {
+  header .mobileNavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    max-width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    transition: 0.3s;
+  }
+  header .mobileNavbar i {
+    font-size: 1.5rem;
+    color: white;
+  }
+  header nav > i {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size:x-large;
+  }
+  header nav figure {
+    display: flex;
+    justify-content: center;
+  }
+  header nav figure img {
+    max-width: 60%;
+  }
+  header nav ul {
+    display: block;
+  }
+  header nav ul li {
+    display: block;
+    font-weight: normal;
+    color: black;
+    margin-left: 0px;
+    text-align: center;
+    padding: 10px;
+    transition: 0.3s;
+  }
+  header nav ul li:hover {
+    background-color: rgba(255, 0, 0, 0.507);
+    color: var(--whiten-color);
+  }
+  header nav ul li:first-child {
+    border-bottom: none;
+    margin-top: 10px;
+  }
+  header nav .social-media {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+  }
+  header nav .social-media {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    width: fit-content;
+    border-top: 3px solid var(--red-color);
+  }
+}
+header .content {
+  height: calc(100vh - 100px);
+  min-height: 60%!important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--whiten-color);
+  text-align: center;
+}
+header .content p {
+  font-size: x-large;
+  letter-spacing: -0.1rem;
+}
+header .content h2 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-size: 3.5rem;
+  letter-spacing: -0.2rem;
+}
+header .content .commonbtn {
+  background-color: var(--lime-color);
+  border: 2px solid var(--lime-color);
+}
+header .content .commonbtn:hover {
+  background-color: transparent;
+  color: var(--lime-color);
+}
+/**************************************************/
+/************* Section Two (OUR MENU) *************/
+section.our-menu {
+  padding-bottom: 50px;
+  background-image: url("https://fast-food.bold-themes.com/main-demo/wp-content/uploads/sites/2/2017/06/background-tree-white.jpg");
+}
+section.our-menu .items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 800px) {
+  section.our-menu .items {
+    justify-content: center;
+  }
+}
+section.our-menu .items .item {
+  max-width: 300px;
+  text-align: center;
+}
+section.our-menu .items .item img {
+  max-width: 100%;
+}
+section.our-menu .items .item p {
+  color: var(--paragraph-color);
+}
+section.our-menu .orderbtn {
+  text-align: center;
+}
+section.our-menu .commonbtn {
+  background-color: transparent;
+  border: 2px solid var(--red-color);
+  color: var(--red-color);
+  margin-top: 30px;
+}
+section.our-menu .commonbtn:hover {
+  background-color: var(--red-color);
+  color: var(--whiten-color);
+}
+/*************************************************/
+/********** Section Three (Spec-Offer) ***********/
+section.spec-offer {
+  height: 100vh;
+  background-image: url("https://fast-food.bold-themes.com/main-demo/wp-content/uploads/sites/2/2017/06/cell-background-pizza-right.jpg");
+  background-size: cover;
+  background-position: 50%;
+  background-attachment: local;
+  color: var(--whiten-color);
+  display: flex;
+  align-items: center;
+}
+section.spec-offer .container {
+  width: 100%;
+}
+section.spec-offer .content {
+  max-width: 480px;
+  margin-right: auto;
+}
+section.spec-offer .content h3 {
+  background-color: var(--lime-color);
+  width: fit-content;
+  padding: 1px 8px;
+}
+section.spec-offer .content h2 {
+  font-size: 2.3rem;
+  letter-spacing: -0.15rem;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+section.spec-offer .content p {
+  color: var(--paragraph-color);
+  font-weight:600;
+}
+@media (max-width: 600px){
+  section.spec-offer .content p {
+    color: white;
+  }
+}
+section.spec-offer .commonbtn {
+  background-color: transparent;
+  border: 2px solid var(--whiten-color);
+  color: var(--whiten-color);
+}
+section.spec-offer .commonbtn:hover {
+  background-color: var(--whiten-color);
+  color: black;
+}
+/*************************************************/
+/************ Section Four (Services) ************/
+section.services {
+  background-color: var(--lime-color);
+  padding-top: 30px;
+  padding-bottom: 50px;
+  color: var(--whiten-color);
+}
+section.services .content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-basis: 25%;
+}
+@media (max-width: 960px) {
+  section.services .content {
+    justify-content: center;
+  }
+}
+section.services .content .service {
+  text-align: center;
+  max-width: 250px;
+}
+@media (max-width: 960px) {
+  section.services .content .service {
+    max-width: 350px;
+  }
+}
+@media (max-width: 600px) {
+  section.services .content .service {
+    max-width: 100%;
+  }
+}
+section.services .content .service h4 {
+  white-space: nowrap;
+}
+section.services .content .service p {
+  margin-top: 15px;
+  color: #e6e6e6;
+  font-size: 14px;
+  letter-spacing: -0.05rem;
+}
+/*************************************************/
+/********** Section Five (Best Sellers) **********/
+section.best-sellers {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+section.best-sellers .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 800px){
+  section.best-sellers .content {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+section.best-sellers .content .itemimage {
+  flex-basis: 50%;
+}
+section.best-sellers .content .itemimage img {
+  width: 420px;
+  max-width: 100%;
+}
+section.best-sellers .content .itemdetails h2 {
+  font-size: 3rem;
+  letter-spacing: -0.1rem;
+}
+section.best-sellers .content .itemdetails p {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: var(--paragraph-color);
+  letter-spacing: -0.05rem;
+}
+@media (max-width: 800px){
+  section.best-sellers .content .itemdetails {
+    text-align: center;
+  }
+}
+section.best-sellers .commonbtn {
+  background-color: transparent;
+  border: 2px solid var(--red-color);
+  color: var(--red-color);
+  margin-top: 30px;
+}
+section.best-sellers .commonbtn:hover {
+  background-color: var(--red-color);
+  color: var(--whiten-color);
+}
+/*************************************************/
+/************* Section Sex (Call Us) *************/
+section.call-us {
+  background-color: #232323;
+  color: var(--whiten-color);
+  display: flex;
+  align-items: center;
+}
+section.call-us .content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 700px) {
+  section.call-us .content {
+    flex-direction: column;
+  }
+}
+section.call-us .content .text-sec {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 700px){
+  section.call-us .content .text-sec {
+    justify-content: center;
+  }
+}
+section.call-us .content .text-sec .text-content {
+  padding: 20px;
+}
+
+section.call-us .content .text-sec h4 {
+  background-color: var(--lime-color);
+  width: fit-content;
+  padding: 2px 8px;
+}
+section.call-us .content .text-sec h2 {
+  font-size: 2rem;
+  margin: 25px auto;
+}
+@media (max-width: 350px){
+  section.call-us .content .text-sec h2 {
+    font-size: 1.5rem;
+  }
+}
+section.call-us .content .text-sec .worktime {
+  display: flex;
+}
+section.call-us .content .text-sec .worktime i {
+  font-size: 4rem;
+  color: var(--lime-color);
+  margin-right: 20px;
+  min-width: 60px;
+}
+section.call-us .content .text-sec .worktime .worktime-cont span {
+  display: block;
+  color: var(--paragraph-color);
+  font-size: 14px;
+}
+section.call-us .content .text-sec address {
+  margin: 15px auto;
+  display: flex;
+  color: var(--paragraph-color);
+  font-size: 14px;
+  font-style: normal;
+}
+section.call-us .content .text-sec address i {
+  font-size: 4rem;
+  color: var(--lime-color);
+  margin-right: 20px;
+  min-width: 60px;
+  text-align: center;
+}
+section.call-us .content .text-sec address span {
+  display: block;
+}
+@media (max-width: 350px){
+  section.call-us .content .text-sec .worktime,
+  section.call-us .content .text-sec address {
+    flex-direction: column;
+    align-items: center;
+  }
+  section.call-us .content .text-sec .worktime .worktime-cont span,
+  section.call-us .content .text-sec address span {
+    text-align: center;
+  }
+  section.call-us .content .text-sec .worktime .worktime-cont span:first-child,
+  section.call-us .content .text-sec address span:first-child {
+    margin-top: 10px;
+  }
+  section.call-us .content .text-sec .text-content .social-media {
+    justify-content: center;
+  }
+}
+section.call-us .content .text-sec .text-content .social-media {
+  display: flex;
+  gap: 5px;
+  margin-top: 30px;
+}
+section.call-us .content .text-sec .text-content .social-media span {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--whiten-color);
+  background-color: var(--whiten-color);
+  transition: 0.4s;
+  position: relative;
+  z-index: 1;
+}
+section.call-us .content .text-sec .text-content .social-media span::after {
+  content: "";
+  width: 0%;
+  height: 0%;
+  position: absolute;
+  z-index: 2;
+  background-color: #232323;
+  transition: 0.4s;
+}
+section.call-us .content .text-sec .text-content .social-media span i {
+  color: black;
+  transition: 0.4s;
+  position: relative;
+  z-index: 3;
+}
+section.call-us .content .text-sec .text-content .social-media span:hover::after {
+  width: 100%;
+  height: 100%;
+}
+section.call-us .content .text-sec .text-content .social-media span:hover i {
+  color: var(--whiten-color);
+}
+section.call-us .content .img-sec {
+  flex-basis: 50%;
+}
+section.call-us .content .img-sec img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+/************************************************/
+/*********** Section Seven (Google-Map) ***********/
+section.google-map {
+  height: 500px;
+}
+/************************************************/
+/*********** Section Eight (Download) ***********/
+section.download {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background-color: var(--red-color);
+}
+section.download .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media(max-width: 600px){
+  section.download .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+section.download h2 {
+  color: var(--whiten-color);
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: -0.1rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+section.download .commonbtn {
+  background-color: transparent;
+  border: 2px solid var(--whiten-color);
+  color: var(--whiten-color);
+  margin-bottom: 10px;
+}
+section.download .commonbtn:hover {
+  background-color: var(--whiten-color);
+  color: var(--red-color);
+}
+/*************************************************/
+/************* Section Nine (Footer) *************/
+footer .content {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .content span {
+  display: inline-block;
+  margin-top: 3px;
+}
+footer .content span, footer .content ul li {
+  font-size: 14px;
+}
+footer .content ul li {
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+footer .content ul li:hover {
+  color: var(--red-color);
+}
+@media(max-width: 600px){
+  footer .content {
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .content span {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  footer .content span, footer .content ul {
+    text-align: center;
+  }
+}
