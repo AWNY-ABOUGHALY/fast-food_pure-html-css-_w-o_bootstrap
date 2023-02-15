@@ -133,7 +133,7 @@ header nav .social-media span i:hover {
   }
   header nav {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -300px;
     width: 300px;
